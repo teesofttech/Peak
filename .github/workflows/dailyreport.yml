@@ -18,13 +18,13 @@ jobs:
           run: |
             git config --global user.email "${{ secrets.EMAIL }}"
             git config --global user.name "${{ secrets.USER_NAME }}"
-            git clone https://github.com/harivamsi9/git-greener.git
+            git clone https://github.com/teesofttech/Peak.git
             
 
 
         - name: Update Stats
           run: |
-            cd git-greener
+            cd Peak
             git log --oneline | wc -l
             sudo chmod +x hello.sh
             ./hello.sh > README.md 
